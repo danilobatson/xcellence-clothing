@@ -1,18 +1,28 @@
-import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import './menu-item.styles.scss';
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
-  
-  
-  console.log(typeof title, title);
-  console.log(typeof imageUrl, imageUrl);
-  console.log(typeof size, size);
-  console.log(typeof history,  history);
-  console.log(typeof linkUrl, linkUrl);
-  console.log(typeof match, match);
+interface MenuItemProps {
+  title: string;
+  imageUrl: string;
+  size: string;
+  history: any;
+  linkUrl: string;
+  match: {
+    isExact: boolean;
+    path: string;
+    url: string;
+  };
+}
 
+const MenuItem = ({
+  title,
+  imageUrl,
+  size,
+  history,
+  linkUrl,
+  match,
+}: MenuItemProps) => {
   return (
     <div
       className={`${size} menu-item`}
