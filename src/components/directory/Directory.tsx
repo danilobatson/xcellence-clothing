@@ -19,7 +19,7 @@ interface DirectoryProps {
   sections: DirectoryArray;
 }
 
-const Directory = ({ sections }: DirectoryProps) => {
+const Directory: React.FC<DirectoryProps> = ({ sections }) => {
   return (
     <div className='directory-menu'>
       {sections.map(({ id, ...otherSectionProps }) => (
