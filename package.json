@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^29.2.3",
     "@types/node": "^18.11.10",
-    "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "checkout": "^1.0.1",
     "firebase": "^9.1.2",
@@ -46,6 +45,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "react-router-dom": "^5.3.0",
     "react-test-renderer": "^17.0.2",
