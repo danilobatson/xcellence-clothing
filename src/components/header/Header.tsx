@@ -14,13 +14,14 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './header.styles.scss';
 
 interface CurrentUserObj {
-  id: number;
-  displayName: string;
-  email: string;
-  createdAt: string;
+  currentUser: {
+    id: number;
+    displayName: string;
+    email: string;
+    createdAt: string;
+  } | null;
 }
-interface HeaderProps {
-  currentUser: null | CurrentUserObj;
+interface HeaderProps extends CurrentUserObj {
   hidden: boolean;
 }
 

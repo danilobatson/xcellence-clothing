@@ -32,8 +32,7 @@ const CheckoutItem = ({
   addItem,
   removeItem,
 }: CheckoutItemProps) => {
-  console.log('hello');
-  console.log(clearItem);
+
   const { name, imageUrl, price, quantity } = cartItem;
   return (
     <div className='checkout-item'>

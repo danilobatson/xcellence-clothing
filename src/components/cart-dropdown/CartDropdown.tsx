@@ -11,14 +11,15 @@ import { toggleCartHidden } from '../../redux/cart/cart.actions.js';
 import './cart-dropdown.styles.scss';
 
 interface CartItems {
-  id: number;
-  name: string;
-  imageUrl: string;
-  price: number;
-  quantity: number;
+  cartItems: {
+    id: number;
+    name: string;
+    imageUrl: string;
+    price: number;
+    quantity: number;
+  }[]
 }
-interface CartDropdownProps {
-  cartItems: CartItems[];
+interface CartDropdownProps extends CartItems {
   history: any;
   dispatch: any;
 }
