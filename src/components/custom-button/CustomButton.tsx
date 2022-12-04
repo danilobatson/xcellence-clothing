@@ -6,7 +6,7 @@ interface CustomButtonProps {
   children: React.ReactNode;
   isGoogleSignIn?: boolean;
   inverted?: boolean;
-  [key: string]: any;
+  onClick: () => void;
 }
 
 const CustomButton = ({

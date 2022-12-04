@@ -16,16 +16,12 @@ interface CartItemObj {
   quantity: number;
 }
 interface CheckoutItemProps {
-  cartItem: {
-    name: string;
-    imageUrl: string;
-    price: number;
-    quantity: number;
-  };
+  cartItem: CartItemObj;
   clearItem: (a: CartItemObj) => void;
   addItem: (a: CartItemObj) => void;
   removeItem: (a: CartItemObj) => void;
 }
+
 const CheckoutItem = ({
   cartItem,
   clearItem,
