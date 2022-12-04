@@ -25,9 +25,7 @@ interface CartDropdownProps {
 
 
 const CartDropdown = ({ cartItems, history, dispatch }: CartDropdownProps) => {
-  console.log('cartItems: ', cartItems);
-  console.log('history: ', history);
-  console.log('dispatch: ', dispatch);
+
   return (
     <div className='cart-dropdown'>
       <div className='cart-items'>
