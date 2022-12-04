@@ -9,7 +9,7 @@ import {
   selectCartTotal,
 } from '../../redux/cart/cart.selectors';
 
-import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
+import {StripeCheckoutButton} from '../../components';
 
 import './checkout.styles.scss';
 

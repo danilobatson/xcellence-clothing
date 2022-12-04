@@ -9,10 +9,6 @@ interface FormInputProps {
 }
 const FormInput = ({ handleChange, label, ...otherProps }: FormInputProps) => {
 
-  console.log('handleChange: ', handleChange);
-  console.log('label: ', label);
-  console.log(typeof label)
-
   return (
   <div className='group'>
     <input className='form-input' onChange={handleChange} {...otherProps} />
