@@ -8,13 +8,21 @@ import MenuItem from '../menu-item/';
 import './directory.styles.scss';
 
 
-//TODO: Add type for sections
-interface FixThisLater {
-  [index: number]: { title: string; imageUrl: string; id: number, linkUrl: string };
+
+type DirectoryObject = {
+  title: string;
+  imageUrl: string;
+  id: number;
+  linkUrl: string;
+};
+
+type DirectoryArray = DirectoryObject[];
+
+interface DirectoryProps {
+  sections: DirectoryArray;
 }
 
-
-const Directory = ({ sections } : FixThisLater) => {
+const Directory = ({ sections }: DirectoryProps) => {
   console.log('sections', sections);
 
   return (
