@@ -14,10 +14,10 @@ interface CollectionItemTypes {
 }
 interface CollectionItemProps{
   item: CollectionItemTypes;
-  addItem?: (item: CollectionItemTypes) => void;
+  addItem: (item: CollectionItemTypes) => void;
 }
 
-const CollectionItem = ({ item }: CollectionItemProps) => {
+const CollectionItem = ({ item, addItem }: CollectionItemProps) => {
   const { name, price, imageUrl } = item;
 
   return (
