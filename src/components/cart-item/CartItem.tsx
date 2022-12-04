@@ -10,9 +10,9 @@ interface CartItemProps {
     quantity: number;
   };
 }
-const CartItem = ({
+const CartItem: React.FC<CartItemProps> = ({
   item: { imageUrl, price, name, quantity },
-}: CartItemProps): JSX.Element=> (
+}) => (
   <div className='cart-item'>
     <img src={imageUrl} alt='item' />
     <div className='item-details'>

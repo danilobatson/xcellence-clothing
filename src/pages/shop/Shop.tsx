@@ -12,7 +12,7 @@ interface ShopPageProps {
 	};
 }
 
-const ShopPage = ({ match } : ShopPageProps): JSX.Element => {
+const ShopPage : React.FC<ShopPageProps>= ({ match }) => {
 
   return (
 		<div className='shop-page'>

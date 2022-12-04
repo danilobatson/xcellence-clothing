@@ -14,7 +14,7 @@ interface CartIconProps {
   itemCount: number;
 }
 
-const CartIcon = ({ toggleCartHidden, itemCount }: CartIconProps): JSX.Element => {
+const CartIcon: React.FC<CartIconProps> = ({ toggleCartHidden, itemCount }) => {
 
   return (
     <div className='cart-icon' onClick={toggleCartHidden}>

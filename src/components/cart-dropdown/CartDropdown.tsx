@@ -17,7 +17,7 @@ interface CartItems {
     imageUrl: string;
     price: number;
     quantity: number;
-  }[]
+  }[];
 }
 interface CartDropdownProps extends RouteComponentProps {
   dispatch: any;
@@ -30,9 +30,11 @@ interface CartDropdownProps extends RouteComponentProps {
   }[];
 }
 
-
-const CartDropdown = ({ cartItems, history, dispatch }: CartDropdownProps): JSX.Element => {
-
+const CartDropdown: React.FC<CartDropdownProps> = ({
+  cartItems,
+  history,
+  dispatch,
+}) => {
   console.log('CartDropdown: ', history);
 
   return (
@@ -59,7 +61,7 @@ const CartDropdown = ({ cartItems, history, dispatch }: CartDropdownProps): JSX.
 };
 
 const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems
+  cartItems: selectCartItems,
 });
 
 export default withRouter(connect(mapStateToProps)(CartDropdown));

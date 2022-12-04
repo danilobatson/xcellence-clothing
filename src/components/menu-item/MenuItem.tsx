@@ -9,14 +9,14 @@ interface MenuItemProps extends RouteComponentProps {
   linkUrl?: string;
 }
 
-const MenuItem = ({
+const MenuItem: React.FC<MenuItemProps> = ({
   title,
   imageUrl,
   size,
   history,
   linkUrl,
   match,
-}: MenuItemProps): JSX.Element =>  {
+}) => {
   return (
     <div
       className={`${size} menu-item`}
