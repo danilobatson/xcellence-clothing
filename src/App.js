@@ -5,8 +5,8 @@ import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 
-import {HomePage} from './pages/';
-import ShopPage from './pages/shop/shop.component';
+import { HomePage, Shop } from './pages/';
+
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 
@@ -49,7 +49,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route path='/shop' component={ShopPage} />
+          <Route path='/shop' component={Shop} />
           <Route exact path='/checkout' component={CheckoutPage} />
           <Route
             exact

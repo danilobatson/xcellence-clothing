@@ -23,7 +23,6 @@ interface DirectoryProps {
 }
 
 const Directory = ({ sections }: DirectoryProps) => {
-  console.log('sections', sections);
 
   return (
     <div className='directory-menu'>
