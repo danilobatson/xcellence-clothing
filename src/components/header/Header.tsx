@@ -25,7 +25,7 @@ interface HeaderProps extends CurrentUserObj {
   hidden: boolean;
 }
 
-const Header = ({ currentUser, hidden }: HeaderProps) => (
+const Header: React.FC<HeaderProps> = ({ currentUser, hidden }) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
