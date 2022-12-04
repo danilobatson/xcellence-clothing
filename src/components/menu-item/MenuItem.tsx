@@ -1,18 +1,12 @@
-import { withRouter } from 'react-router-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 import './menu-item.styles.scss';
 
-interface MenuItemProps {
+interface MenuItemProps extends RouteComponentProps {
   title?: string;
   imageUrl?: string;
   size?: string;
-  history?: any;
   linkUrl?: string;
-  match?: {
-    isExact?: boolean;
-    path?: string;
-    url?: string;
-  };
 }
 
 const MenuItem = ({

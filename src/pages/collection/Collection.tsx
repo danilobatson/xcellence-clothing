@@ -35,7 +35,7 @@ const Collection = ({ collection }: CollectionPageProps) => {
   );
 };
 
-interface StateInt {
+interface StateInterface {
   shop: {
     collections: {
       [key: string]: {
@@ -82,7 +82,7 @@ interface OwnProps {
 	};
 }
 
-const mapStateToProps = (state: StateInt, ownProps: OwnProps) => {
+const mapStateToProps = (state: StateInterface, ownProps: OwnProps) => {
 
   return {
     collection: selectCollection(ownProps.match.params.collectionId)(state),

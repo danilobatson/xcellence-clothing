@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { withRouter } from 'react-router-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 import CustomButton from '../custom-button';
 import CartItem from '../cart-item';
@@ -19,13 +19,21 @@ interface CartItems {
     quantity: number;
   }[]
 }
-interface CartDropdownProps extends CartItems {
-  history: any;
+interface CartDropdownProps extends RouteComponentProps {
   dispatch: any;
+  cartItems: {
+    id: number;
+    name: string;
+    imageUrl: string;
+    price: number;
+    quantity: number;
+  }[];
 }
 
 
-const CartDropdown = ({ cartItems, history, dispatch }: CartDropdownProps):JSX.Element => {
+const CartDropdown = ({ cartItems, history, dispatch }: CartDropdownProps): JSX.Element => {
+
+  console.log('CartDropdown: ', history);
 
   return (
     <div className='cart-dropdown'>

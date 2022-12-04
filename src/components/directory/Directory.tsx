@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { selectDirectorySections } from '../../redux/directory/directory.selectors';
 import { createStructuredSelector } from 'reselect';
 
+
 import MenuItem from '../menu-item/';
 import './directory.styles.scss';
 
