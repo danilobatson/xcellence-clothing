@@ -14,7 +14,7 @@ interface CartIconProps {
   itemCount: number;
 }
 
-const CartIcon = ({ toggleCartHidden, itemCount }: CartIconProps) => {
+const CartIcon = ({ toggleCartHidden, itemCount }: CartIconProps): JSX.Element => {
 
   return (
     <div className='cart-icon' onClick={toggleCartHidden}>

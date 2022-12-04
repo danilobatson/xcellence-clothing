@@ -24,7 +24,7 @@ interface CartDropdownProps {
 }
 
 
-const CartDropdown = ({ cartItems, history, dispatch }: CartDropdownProps) => {
+const CartDropdown = ({ cartItems, history, dispatch }: CartDropdownProps):JSX.Element => {
 
   return (
     <div className='cart-dropdown'>
