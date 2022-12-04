@@ -22,13 +22,12 @@ interface CheckoutItemProps {
   removeItem: (a: CartItemObj) => void;
 }
 
-const CheckoutItem = ({
+const CheckoutItem: React.FC<CheckoutItemProps> = ({
   cartItem,
   clearItem,
   addItem,
   removeItem,
-}: CheckoutItemProps) => {
-
+}) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
     <div className='checkout-item'>
@@ -58,8 +57,7 @@ interface DispatchProps {
   payload: CartItemObj;
 }
 
-  
-const mapDispatchToProps = (dispatch: (a: DispatchProps) => void)=> ({
+const mapDispatchToProps = (dispatch: (a: DispatchProps) => void) => ({
   clearItem: (item: CartItemObj) => dispatch(clearItemFromCart(item)),
   addItem: (item: CartItemObj) => dispatch(addItem(item)),
   removeItem: (item: CartItemObj) => dispatch(removeItem(item)),
