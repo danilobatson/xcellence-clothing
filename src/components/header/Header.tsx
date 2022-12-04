@@ -13,7 +13,18 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 
 import './header.styles.scss';
 
-const Header = ({ currentUser, hidden }) => (
+interface CurrentUserObj {
+  id: number;
+  displayName: string;
+  email: string;
+  createdAt: string;
+}
+interface HeaderProps {
+  currentUser: null | CurrentUserObj;
+  hidden: boolean;
+}
+
+const Header = ({ currentUser, hidden }: HeaderProps) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
@@ -39,7 +50,7 @@ const Header = ({ currentUser, hidden }) => (
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  hidden: selectCartHidden
+  hidden: selectCartHidden,
 });
 
 export default connect(mapStateToProps)(Header);
