@@ -1,4 +1,4 @@
-import SignInAndSignUpPage from './sign-in-and-sign-up.component';
+import SignInAndSignUpPage from './SignInAndSignUpPage';
 
 
 export default SignInAndSignUpPage;

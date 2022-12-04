@@ -2,7 +2,18 @@ import React from 'react';
 
 import './form-input.styles.scss';
 
-const FormInput = ({ handleChange, label, ...otherProps }) => (
+interface FormInputProps {
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  label: string;
+  value: string;
+}
+const FormInput = ({ handleChange, label, ...otherProps }: FormInputProps) => {
+
+  console.log('handleChange: ', handleChange);
+  console.log('label: ', label);
+  console.log(typeof label)
+
+  return (
   <div className='group'>
     <input className='form-input' onChange={handleChange} {...otherProps} />
     {label ? (
@@ -15,6 +26,6 @@ const FormInput = ({ handleChange, label, ...otherProps }) => (
       </label>
     ) : null}
   </div>
-);
+)};
 
 export default FormInput;
