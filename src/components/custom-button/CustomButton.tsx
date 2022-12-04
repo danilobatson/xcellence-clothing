@@ -9,12 +9,12 @@ interface CustomButtonProps {
   onClick: () => void;
 }
 
-const CustomButton = ({
+const CustomButton: React.FC<CustomButtonProps> = ({
   children,
   isGoogleSignIn,
   inverted,
   ...otherProps
-}: CustomButtonProps) => {
+}) => {
   return (
     <button
       className={`${inverted ? 'inverted' : ''} ${
