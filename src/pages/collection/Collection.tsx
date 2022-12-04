@@ -75,15 +75,14 @@ interface StateInterface {
 }
 
 interface OwnProps {
-	match: {
-		params: {
-			collectionId: string;
-		};
-	};
+  match: {
+    params: {
+      collectionId: string;
+    };
+  };
 }
 
 const mapStateToProps = (state: StateInterface, ownProps: OwnProps) => {
-
   return {
     collection: selectCollection(ownProps.match.params.collectionId)(state),
   };
