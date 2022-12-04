@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route} from 'react-router-dom'
-import CollectionPage from '../collection/collection.component';
+import CollectionPage from '../collection/Collection';
 
 import CollectionsOverview from '../../components/collections-overview/collections-overview.components'
 

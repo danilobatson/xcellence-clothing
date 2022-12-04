@@ -7,23 +7,18 @@ import { createStructuredSelector } from 'reselect';
 import MenuItem from '../menu-item/';
 import './directory.styles.scss';
 
-
-
-type DirectoryObject = {
+type DirectoryArray = {
   title: string;
   imageUrl: string;
   id: number;
   linkUrl: string;
-};
-
-type DirectoryArray = DirectoryObject[];
+}[];
 
 interface DirectoryProps {
   sections: DirectoryArray;
 }
 
 const Directory = ({ sections }: DirectoryProps) => {
-
   return (
     <div className='directory-menu'>
       {sections.map(({ id, ...otherSectionProps }) => (
