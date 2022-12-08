@@ -6,9 +6,10 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 import CustomButton from '../custom-button';
 import CartItem from '../cart-item';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
-import { toggleCartHidden } from '../../redux/cart/cart.actions.js';
 
 import './cart-dropdown.styles.scss';
+import { useAppSelector, useAppDispatch } from '../../store/hooks';
+import { toggleCartHidden } from '../../store/cart/cartSlice';
 
 interface CartItems {
   cartItems: {
@@ -20,7 +21,7 @@ interface CartItems {
   }[];
 }
 interface CartDropdownProps extends RouteComponentProps {
-  dispatch: any;
+  dispatch?: any;
   cartItems: {
     id: number;
     name: string;
@@ -33,9 +34,9 @@ interface CartDropdownProps extends RouteComponentProps {
 const CartDropdown: React.FC<CartDropdownProps> = ({
   cartItems,
   history,
-  dispatch,
 }) => {
   console.log('CartDropdown: ', history);
+  const dispatch = useAppDispatch();
 
   return (
     <div className='cart-dropdown'>
